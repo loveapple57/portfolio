@@ -1,0 +1,240 @@
+@charset "utf-8";
+    
+    /* reset */
+    * {margin: 0;padding: 0;}
+    html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
+    h1, h2, h3, h4, h5, h6 {font-weight: 700; font-size: inherit;}
+    a {color: inherit; text-decoration: inherit;}
+    img {vertical-align: middle;}
+    a img {border: none;}
+    li {list-style: none;}
+    address, em, i {font-style: normal;}
+    a:focus {outline: none}
+    button:focus {outline: none}
+
+    @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;1,800&family=Noto+Sans+KR:wght@300;400;500&family=Playfair+Display:wght@500;700;800;900&display=swap');
+
+
+
+/* layout */
+body {font-family: 'Noto Sans KR', sans-serif; font-size:19px;}
+.wrap {width: 100%; margin: 0 auto; background: #272932; color: #fff;}
+
+
+.visual {width: 100%; height: 100vh; background: url(../img/processbg.png) no-repeat center; background-size: cover;  position: relative;}
+.vsiaul .inner {width: 90%; margin: 0 auto;}
+
+.visual .inner .titBox {position: absolute; top: 34%; left: 10%;}
+.visual .inner .tit {font-family: 'ivy mode', serif; font-size: 165px; color: #fff;   font-weight: 600;}
+.visual .inner .sub {font-family: 'Mulish', sans-serif; font-size: 22px; color: #fff;    padding: 6% 0 0 23%;}
+
+.visual .inner .imgBox {position: absolute; bottom: 14%; right: 10%; text-align: center;}
+.visual .inner .imgBox .img1 {margin-bottom: 100%;}
+.visual .inner .line1 {width: 1586px; height: 1px; background: #fff; display: inline-block; position: absolute; left: 0; bottom: 41%;}
+.visual .inner .line2 {width: 560px; height: 1px; transform: rotate(90deg); background: #fff; display: inline-block; position: absolute; left: 7%; bottom: 29%;}
+
+
+
+
+/* contents */
+.contents {width: 100%; height: 100vh;}
+.contents .inner {width: 85%; margin: 0 auto; padding: 7% 0;}
+.contents .inner .tit {font-family: 'Noto Sans KR', sans-serif;  font-size: 81px; color: #f3931b; font-weight: 700; }
+.contents .inner .con {display: flex; justify-content: space-between; width: 70%; margin: 5% auto 0;}
+.contents .inner .con li {text-align: center;}
+.contents .inner .con li .title {font-size: 50px; color: #FDC682; font-weight: 600; margin-bottom: 11%;}
+.contents .inner .con li .title span {color: #f3931b;}
+.contents .inner .con li .txt {font-size: 23px; font-weight: normal; color: #FEE2C0; border: 1px solid #F3931B; padding: 5% 0; border-radius: 13px; margin-bottom: 5%;}
+
+
+
+
+/* brainstorming */
+.brainstorming {width: 100%; height: 100vh; background: url(../img/brainbg.png) no-repeat center; background-size: cover;}
+.brainstorming .inner {width: 85%; margin: 0 auto; padding:5% 0;}
+.brainstorming .inner .tit {font-size: 52px; font-family: 'ivy mode', serif; color: #F3931B; font-weight: 600;}
+.brainstorming .inner .main {text-align: center; margin-top: 5%;}
+.brainstorming .inner .main .img {margin-bottom: 3%;}
+.main .txtBox {background: #F3931B; width: 60%; margin: 0 auto; border-radius: 15px; padding: 4% 0; }
+.main .txtBox .title {font-size: 28px; font-weight: 500; margin-bottom: 2%;}
+.main .txtBox .txt {font-size: 18px; font-weight: 400; padding-bottom: 5px;}
+
+
+
+
+/* Affinity DIagram */
+.Affinity {width: 100%; height: 100vh; }
+.Affinity .inner {width: 85%; margin: 0 auto; padding: 5% 0;}
+.Affinity .inner .tit {font-size: 52px; font-family: 'ivy mode', serif; color: #F3931B; font-weight: 600;}
+.Affinity .inner .main {text-align: center; margin-top: 5%;}
+.Affinity .inner .main .title {font-size: 24px; color: #FDC682; margin-bottom: 10px; font-weight: 600;}
+.Affinity .inner .main .txt {font-size: 24px; margin-bottom: 40px; font-weight: 500;}
+.Affinity .inner .main .txt span {color: #F3931B;}
+
+
+
+/* Affinity DIagram2 */
+.Affinity2 {width: 100%; height:1500px;}
+.Affinity2 .inner {width: 85%; margin: 0 auto; padding: 8% 0;}
+.Affinity2 .inner .main {text-align: center;}
+.Affinity2 .inner .main .title {font-size: 24px; color: #FDC682; font-weight: 600; margin-bottom: 10px;}
+.Affinity2 .inner .main .txt {font-size: 24px; font-weight:500; margin-bottom: 40px;}
+.Affinity2 .inner .main .txt span {color: #F3931B;}
+.Affinity2 .inner .main .img {margin-bottom: 40px;}
+.Affinity2 .inner .main .textBox {background: #31343F; padding: 4% 0; width: 60%; margin: 0 auto;  border-radius: 15px;}
+.Affinity2 .inner .main .textBox .txt2 {font-size: 23px; margin-bottom: 2%; }
+.Affinity2 .inner .main .textBox .txt2 span {color: #F3931B;}
+.Affinity2 .inner .main .textBox .txt3 {font-size: 22px; color: #CBCBCB; line-height: 1.6; font-weight: 300;}
+
+
+
+/* Affinity Diagram3 */
+.Affinity3 {width: 100%; padding: 10% 0;}
+.Affinity3 .inner {width: 90%; margin: 0 auto; }
+.Affinity3 .inner .box {display: flex; flex-wrap: wrap; justify-content: center; align-items: center; width: 50%; margin: 0 auto; }
+.Affinity3 .inner .box li {font-size: 20px; font-weight: 200; border: 1px solid #F3931B; border-radius: 10px; width: 40%; padding: 2% 0; text-align: center;  margin:10px;}
+.Affinity3 .inner .box li span {font-size: 20px; font-weight: 600; color: #F3931B;}
+.Affinity3 .inner .box li:nth-child(5) {width: 75%;}
+
+
+
+
+/* Keyword */
+.keyword {width: 100%; padding: 10% 0; position: relative;}
+.keyword .inner {width: 90%; margin: 0 auto;}
+.keyword .inner .line1 {width: 1px; height: 150px; background: #fff;  position: absolute; top: -13%; left: 50%; transform: translateX(-50%); display: inline-block;}
+.keyword .inner .txtBox {text-align: center;}
+.keyword .inner .txtBox .tit {font-size: 23px; color: #F3931B; margin-bottom: 20px;}
+.keyword .inner .txtBox .txt {font-size: 25px; font-weight: 600;}
+
+
+
+
+/* concept */
+.concept {width: 100%; padding: 10% 0; background-image: url(../img/conceptbg.png);}
+.concept .inner {width: 90%; margin: 0 auto;}
+.concept .inner .main {text-align: center;}
+.concept .inner .main .tit {font-size: 52px; font-family: 'ivy mode', serif; margin-bottom: 2%;}
+.concept .inner .main .sub {font-size:20px; font-weight: 300; margin-bottom: 5%;}
+.concept .inner .main .conceptBox {display: flex; width: 74%; justify-content: space-between; margin: 0 auto;}
+.concept .inner .main .conceptBox li {width: 20%;}
+.concept .inner .main .conceptBox li .top {font-size: 19px; padding: 12% 0; border: 1px solid #fff; border-radius: 7px;}
+.concept .inner .main .conceptBox li .bottom {background: #fff; padding: 12% 10%; border-radius: 7px;}
+.concept .inner .main .conceptBox li .bottom .title {font-size:17px; color: #000; font-weight: 500; margin-bottom: 20px;}
+.concept .inner .main .conceptBox li .bottom .txt {font-size:14px; color: #5A5D6A; font-weight: 300;}
+
+
+
+/* designSystem */
+.designSystem {width: 100%; padding: 10% 0;}
+.designSystem .inner {width: 90%; margin: 0 auto; }
+.designSystem .inner .tit {font-size: 52px; font-family: 'ivy mode', serif; color: #F3931B; font-weight: 600;}
+.designSystem .inner .main {width: 70%; margin: 0 auto;  margin: 13% auto;}
+.designSystem .inner .main .color {display: flex; flex-wrap: wrap; justify-content: space-evenly; }
+.designSystem .inner .main .color1 {margin-bottom: 6%;}
+.designSystem .inner .main .color3 {margin-bottom: 6%;}
+
+.designSystem .inner .main .title {font-size: 14px;  font-family: 'Mulish', sans-serif; margin:0 0 2% 8%;}
+
+.designSystem .inner .font {display: flex; width: 84%; margin: 0 auto; margin-bottom:6%;}
+.designSystem .inner .font li:nth-child(1) .tit {font-size: 23px;  font-family: 'ivy mode', serif; color: #fff; font-weight: bold; margin-bottom: 10px;}
+.designSystem .inner .font li:nth-child(1) {font-size: 20px;  font-family: 'ivy mode', serif;}
+
+.designSystem .inner .font li:nth-child(2) .tit {font-size: 23px;  font-family: 'Mulish', sans-serif;  color: #fff; font-weight: bold; margin-bottom: 10px;}
+.designSystem .inner .font li:nth-child(2) {font-size: 20px;  font-family: 'Mulish', sans-serif; }
+
+.designSystem .inner .font li:nth-child(3) .tit {font-size: 23px;  font-family: 'Noto Sans KR', sans-serif; color: #fff; font-weight: bold; margin-bottom: 10px;}
+.designSystem .inner .font li:nth-child(3) {font-size: 20px; font-family: 'Noto Sans KR', sans-serif;}
+
+.designSystem .inner .font .fontBox {display: flex; flex-wrap: wrap; }
+.designSystem .inner .font .fontBox li {width: 40%;}
+
+.designSystem .inner .iconimg {padding-left: 8%;}
+
+
+
+/* IA */
+.IA {width: 100%; padding: 10% 0;}
+.IA .inner {width: 90%; margin: 0 auto;}
+.IA .inner .tit {font-size: 52px; font-family: 'ivy mode', serif; color: #F3931B; font-weight: 600;}
+.IA .inner .main {text-align: center;}
+.IA .inner .main .tit {font-size: 35px; font-family: 'ivy mode', serif; color: #fff;  background: #F3931B; width: 20%; padding: 2% 3%; margin:7% auto;}
+.IA .inner .main .IABox {display: flex; justify-content: space-evenly;  margin: 0 auto; width: 71%;}
+.IA .inner .main .IABox li {width: 17%;}
+.IA .inner .main .IABox .title {font-size: 25px; font-family: 'Mulish', sans-serif; color:#272932; background: #FDC682; border-radius: 9px; padding: 6% 0;}
+.IA .inner .main .IABox .txt {font-size:25px; font-family: 'Mulish', sans-serif; color: #FDC682;  border: 1px solid #FDC682; border-radius: 5px; padding: 5% 0; margin-bottom: 10px;}
+
+
+
+
+/* flowchart */
+.flowchart {width: 100%; padding: 10% 0;}
+.flowchart .inner {width: 90%; margin: 0 auto;}
+.flowchart .inner .tit {font-size: 52px; font-family: 'ivy mode', serif; color: #F3931B; font-weight: 600;}
+.flowchart .inner .img {text-align: center; margin-top: 10%;}
+
+
+
+
+/* Wire frame */
+.WireFrame {width: 100%;  padding: 10% 0;}
+.WireFrame .inner {width: 90%; margin: 0 auto;}
+.WireFrame  .inner .tit {font-size: 52px; font-family: 'ivy mode', serif; color: #F3931B; font-weight: 600;}
+.WireFrame  .inner .img {text-align: center; margin-top: 10%;}
+
+
+
+
+/* Full page */
+.Full {width: 100%; padding: 10% 0;}
+.Full .inner {width: 90%; margin: 0 auto;}
+.Full  .inner .tit {font-size: 52px; font-family: 'ivy mode', serif; color: #F3931B; font-weight: 600;}
+.Full  .inner .img {text-align: center; margin-top: 10%;}
+
+
+
+/* Prototype */
+.Prototype {width: 100%;  padding: 20% 0;}
+.Prototype .inner {width: 90%; margin: 0 auto;}
+.Prototype  .inner .tit {font-size: 52px; font-family: 'ivy mode', serif; color: #F3931B; font-weight: 600;}
+.Prototype  .inner .img {text-align: center; margin-top: 10%;}
+
+
+
+
+
+
+/* thank */
+.thank {width: 100%; height: 1181px; position: relative;}
+.thank .inner {width: 85%; margin: 0 auto; padding-top: 100px;}
+.thank .inner .tit {font-size: 140px; color: #fff; font-family: 'Ivy Mode', sans-serif; font-weight: 700; text-align: center; }
+.thank .inner .text {font-size: 27px; color: #F3931B; font-family: 'Noto Sans KR', sans-serif; padding-top: 20%; text-align: center;}
+.thank .inner .line9 {width: 312px; height: 1px; background: #fff; position: absolute; bottom: 0%; left: 42%; display: inline-block; transform: rotate(90deg);}
+
+
+
+/* footer */
+.footer {width: 100%; background: #272932;}
+.footer .inner {width: 95%; margin: 0 auto; padding: 169px 0 120px; }
+.footer .inner .topBox {margin-bottom: 93px;}
+.footer .inner .topBox .img {margin-bottom: 38px;}
+.footer .inner .contactBox {background: #F3931B; width:100%; border-radius: 20px; height:370px;}
+.footer .inner .contactBox .tit {color: #272932; font-size:210px; font-family: 'Ivy Mode', sans-serif;  font-weight: 400; line-height: 370px; padding-left: 100px;}
+
+.footer .inner .bottomBox .info {display: flex; justify-content: flex-end; font-size:54px; color: #F3931B; font-family: 'ivy mode', serif;}
+.footer .inner .info li:nth-child(1) {padding-right: 230px;}
+.footer .inner .bottomBox .info li { width: 20%; line-height: 1.4;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

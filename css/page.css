@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;1,800&family=Noto+Sans+KR:wght@300;400;500;600&display=swap');
+
+/* Reset */
+* {margin: 0;padding: 0;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
+a {color: inherit; text-decoration: inherit;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+button {background: none; border: none;}
+img {vertical-align: middle;}
+
+
+/* layout */
+body {font-family: 'Noto Sans KR', sans-serif; color: #fff;}
+.wrap {background:#0E0E10;}
+
+/* visual */
+.visual {width: 100%; height: 1200px; background-image: url(../img/page_bg.png); position: relative;}
+.visual .inner {width: 80%; margin: 0 auto; padding-top: 5%;}
+.visual .inner .top .title {font-size: 150px; color: #fff;  font-family: 'ivy mode', serif; font-weight: 500;}
+.visual .inner .top .line {width: 800px; height: 1px; background: #fff; display: inline-block; position: absolute; left: 0;}
+.visual .inner .top .sub {font-size: 16px; color: #fff; font-family: 'Noto Sans KR', sans-serif; line-height: 2; font-weight: 200;  padding-top: 2%;}
+
+.visual .inner .bottom {position: absolute; bottom: -15%;}
+
+
+
+/* About */
+.about {width: 100%;  background: #0E0E10; }
+.about .inner {width: 65%; margin: 0 auto; border-bottom: 1px solid #fff; }
+
+.about .inner .yBox { display: flex; justify-content: space-evenly;  align-items: center;  padding: 10% 0 10%; }
+.about .inner .left .tit {font-size: 27px; font-family: 'Mulish', sans-serif; font-weight: 700; margin-bottom: 8%; }
+.about .inner .left .subTxt {font-size: 19px; font-weight: 200; line-height: 1.9;}
+
+.about .inner .right  {width: 25%;  margin-top: 5%;}
+.about .inner .right .info li {display: flex; margin-bottom: 2%;}
+.about .inner .right .info li .txt {font-weight: 600; padding-right: 7%;}
+
+
+
+
+/* style */
+.style {width: 100%; }
+.style .inner {width: 65%;  margin: 0 auto; padding: 6% 0;  border-bottom: 1px solid #fff; }
+
+.style .inner .title {font-size: 70px; font-family: 'ivy mode', serif; padding:0 0 8% 8%;}
+.style .inner .styleBox {display: flex; width: 85%; flex-wrap: wrap;  margin:  0 auto;}
+.style .inner .styleBox > li {width: 50%; margin-bottom: 8%;}
+.style .inner .styleBox li .tit {font-size: 22px; margin-bottom: 5%;}
+.style .inner .styleBox li .txt {font-size: 21px;}
+
+.style .inner .styleBox li .noto {font-size: 33px; font-weight: 500; margin-bottom: 5%;}
+.style .inner .styleBox > li .font > li {display: flex; margin-bottom: 2%;}
+.style .inner .styleBox > li .font > li .txt2, .txt4, .txt6, .txt8{padding-right: 9%;}
+.style .inner .styleBox > li .font > li .txt6, .txt8{padding-right: 14%;}
+
+
+
+
+/* full */
+.full {width: 100%; }
+.full .inner {width: 65%;  margin:  0 auto; padding: 6% 0 15%; }
+.full .inner .title {font-size: 70px; font-family: 'ivy mode', serif; padding:0 0 8% 8%;}
+.full .inner .fullimg {text-align: center;}
+
+
+
+
+/* thank */
+.thank {width: 100%; height: 1181px; position: relative;}
+.thank .inner {width: 85%; margin: 0 auto; padding-top: 100px;}
+.thank .inner .tit {font-size: 140px; color: #fff; font-family: 'Ivy Mode', sans-serif; font-weight: 700; text-align: center; }
+.thank .inner .text {font-size: 27px; color: #F3931B; font-family: 'Noto Sans KR', sans-serif; padding-top: 20%; text-align: center;}
+.thank .inner .line9 {width: 312px; height: 1px; background: #fff; position: absolute; bottom: 0%; left: 42%; display: inline-block; transform: rotate(90deg);}
+
+
+
+/* footer */
+.footer {width: 100%; background: #0E0E10;}
+.footer .inner {width: 95%; margin: 0 auto; padding: 169px 0 120px; }
+.footer .inner .topBox {margin-bottom: 93px;}
+.footer .inner .topBox .img {margin-bottom: 38px;}
+.footer .inner .contactBox {background: #F3931B; width:100%; border-radius: 20px; height:370px;}
+.footer .inner .contactBox .tit {color: #0E0E10; font-size:210px; font-family: 'Ivy Mode', sans-serif;  font-weight: 400; line-height: 370px; padding-left: 100px;}
+
+.footer .inner .bottomBox .info {display: flex; justify-content: flex-end; font-size:54px; color: #F3931B; font-family: 'ivy mode', serif;}
+.footer .inner .info li:nth-child(1) {padding-right: 230px;}
+.footer .inner .bottomBox .info li { width: 20%; line-height: 1.4;}
+
+
+
+
+
+

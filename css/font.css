@@ -1,0 +1,35 @@
+@font-face {
+ font-family: 'Ivy Mode';
+ src:url(./font/IvyMode-SemiBoldItalic.woff2) format('woff2'),
+     url(./font/IvyMode-SemiBoldItalic.woff) format('woff'),
+     url(./font/IvyMode-SemiBoldItalic.ttf) format('truetype');
+ font-weight: 600;
+ font-style: italic;
+}
+
+@font-face {
+    font-family: 'Ivy Mode';
+    src:url(./font/IvyMode-Bold.eot);
+    src:url(./font/IvyMode-SemiBold.woff2) format('woff2'),
+        url(./font/IvyMode-SemiBold.woff) format('woff'),
+        url(./font/IvyMode-SemiBold.ttf) format('truetype');
+    font-weight: 600;
+    font-style: normal;
+   }
+
+
+
+
+
+
+
+
+
+/* @font-face {
+    font-family: 'Ivy Mode';
+    src:url(../font/ivymode/IvyMode-SemiBoldItalic.woff2) format('woff2'),
+        url(../font/ivymode/IvyMode-SemiBoldItalic.woff) format('woff'),
+        url(../font/ivymode/IvyMode-SemiBoldItalic.ttf) format('truetype');
+    font-weight: 600;
+    font-style: italic;
+   } */

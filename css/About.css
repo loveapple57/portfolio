@@ -1,0 +1,603 @@
+@charset "utf-8";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;1,800&family=Noto+Sans+KR:wght@300;400;500;600&display=swap');
+
+/* Reset */
+* {margin: 0;padding: 0;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
+a {color: inherit; text-decoration: inherit;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+button {background: none; border: none;}
+img {vertical-align: middle;}
+
+
+/* layout */
+body {font-family: 'Noto Sans KR', sans-serif; font-size: 16px; line-height: 1.6;}
+.wrap {background: #272932; overflow: hidden;}
+
+
+
+
+/* menuOpen */
+.menuOpen button.open {background: none;border: none; position: fixed; z-index: 100; right: 8%; top: 9%;  box-sizing: border-box;}
+.menuOpen button.open::before {content: ''; width: 100%; height: 100%; position: absolute; z-index: -1; right: 0; top: 0; transition: all 0.5s;}
+.menuOpen button.open:hover::before, .menuOpen button.open:focus::before {right: 0; cursor: pointer;}
+
+/* menuWrap */
+.menuOpen .menuWrap {width: 100%; height: 100vh; position: fixed; top: 0; right: 0; z-index: 100; background: #272932;}
+.menuOpen .menuWrap .tit {color: #767a92; position: absolute; top: 50%; transform: translateY(-50%); left: 25%; font-size: 60px;}
+.menuOpen .menuWrap .tit li a {display: inline-block; margin-bottom: 30px; position: relative; transition: all 0.3s;}
+.menuOpen .menuWrap .tit li a:hover, .menuOpen .menuWrap .tit li a:focus {transform: translateX(30px); color: #F3931B;}
+.menuOpen .menuWrap .tit li a::after {content: ''; width: 0; height: 2px; background: #F3931B; position: absolute; left: 0; bottom: -5px; transition: all 0.3s;}
+.menuOpen .menuWrap .tit li a:hover::after, .menuOpen .menuWrap .tit li a:focus::after {width: 100%;}
+.menuOpen .menuWrap .close{position: absolute; top: 50%; transform: translateY(-50%); left: 30px;}
+
+
+/* menuOpen 열기 */
+.menuOpen .menuWrap {width: 0%; transition:all 0s ; transform: skewY(40deg); opacity: 0;}
+.menuOpen .menuWrap.on {width: 100%; transition:all 0.5s ; transform: skewY(0deg); opacity: 1;}
+
+/* menuWrap ul li */
+.menuOpen .menuWrap ul {display: none;}
+.menuOpen .menuWrap.on ul {display: block;} 
+
+
+
+
+
+/* visual */
+.visual {width: 100%; height: 100vh; background: #272932; position: relative;}
+.visual .inner {width: 90%; height: 100%; margin: 0 auto; }
+.visual .inner .boxImg {padding-top: 82px; position: relative;z-index: 2;}
+.visual .inner .boxImg .text {position: absolute; top: 27%; left: 4%; font-family: 'Ivy Mode', sans-serif; color: #000; font-size: 89px; line-height: 0.6; font-weight: 600;}
+.visual .inner .lineImg {position: absolute; bottom: 44%; right: 5%;}
+
+.visual .inner .tit {font-size: 145px;  font-family: 'Ivy Mode', sans-serif; color: #fff; position: absolute; right: 5%; bottom: 11%; line-height: 1.2;}
+
+.visual .inner .tit span {display: block;}
+.visual .inner .tit span b {font-weight: 700;}
+
+
+.visual .inner .line1 {width: 1536px; height: 1px; background: #fff; position: absolute; left: 0; bottom: 50%; display: inline-block; z-index: 1;}
+.visual .inner .line2 {width: 900px; height: 1px; background: #fff; position: absolute; left: -15%; bottom: 0; display: inline-block; transform: rotate(90deg); z-index: 1;}
+
+/*visual animation */
+@keyframes textAni1 {
+    0% {opacity: 0;}
+    30% {opacity: 0; transform: translate3d(0,40px,0) skewy(8deg); transform-origin: top left;}
+}
+
+.visual .tit.motion span {transform: translate3d(0,0,0) skewy(0deg); overflow: hidden;}
+.visual .tit.motion span b {display: block; animation-name: textAni1; animation-duration: 1.3s;}
+
+
+
+
+
+/* About me */
+.Aboutme {width: 100%; height: 100%; }
+.Aboutme .inner {width: 70%;  margin: 0 auto; padding: 300px 0;}
+.Aboutme .inner .About {text-align: center;}
+.Aboutme .inner .About .img {margin-bottom: 75px;}
+.Aboutme .inner .About .txt1 {font-size: 20px; font-family: 'Noto Sans KR', sans-serif; color: #fff; font-weight: 400; margin-bottom: 90px; }
+.Aboutme .inner .About .txt1 span {display: block;}
+.Aboutme .inner .About .txt1 span b {font-weight: 300;}
+.Aboutme .inner .About .line3 {width: 102px; height: 1px; background: #fff; display: inline-block; transform: rotate(90deg); z-index: 1; margin-bottom: 90px; }
+.Aboutme .inner .About .txt2 {font-size: 19px;  font-family: 'Noto Sans KR', sans-serif; color: #fff; font-weight: 200; line-height: 1.7; width: 57%; margin: 0 auto;}
+.Aboutme .inner .About .txt2 span {font-weight: 800;}
+
+/* Aboutme .txt1 animation */
+.Aboutme .inner .About .txt1.motion span {transform: translate3d(0,0,0) skewy(0deg); overflow: hidden;}
+.Aboutme .inner .About .txt1.motion span b {display: block; animation-name: textAni1; animation-duration: 1s;}
+
+
+
+
+/* profile */
+.profile {width: 100%; height: 100%; }
+.profile .inner {width: 60%; margin: 0 auto; padding: 100px 0;  display: flex; align-items: center; justify-content: space-evenly}
+.profile .inner .leftBox {width: 50%;}
+.profile .inner .leftBox .profileBox {display: flex; flex-direction: row; flex-wrap: wrap; }
+.profile .inner .leftBox .profileBox li {width: 50%; margin-bottom: 25px;}
+.profile .inner .leftBox .profileBox li .tit {font-size: 32px; color: #D76E0D; font-weight: 700; font-family: 'Mulish', sans-serif; }
+.profile .inner .leftBox .profileBox li .text {font-size: 17px; color: #fff; font-family: 'Mulish', sans-serif; font-weight: 200; padding-left: 22px; }
+
+.profile .inner .rightBox {padding-left: 90px;}
+
+
+
+
+
+
+
+/* Personal history */
+.history {width: 100%; height: 1726px; }
+.history .inner {width: 80%;  margin: 0 auto; position: relative; height: 100%; padding-top: 200px;}
+.history .inner .titBox {text-align: center; padding-bottom: 11%;}
+.history .inner .titBox .tit {font-size: 150px; color: #F3931B;  font-family: 'Ivy Mode', sans-serif;}
+
+
+
+.history .inner .titBox .sub {font-size: 19px; color: #FDC682;  font-family: 'Noto Sans KR', sans-serif; }
+
+.con .title {font-size: 85px; color: #F3931B;  font-family: 'Ivy Mode', sans-serif; font-weight: 700; margin-bottom: 22px;}
+.con .txt {width: 23%; font-size: 18px; color: #fff; font-family: 'Noto Sans KR', sans-serif; font-weight: 200;}
+
+.con .title span {display: block;}
+.con .title span b {font-weight: 700;}
+
+.history .inner .top {margin-bottom: 200px;}
+.history .inner .top .con {position: relative; z-index: 1;}
+.history .inner .top .con .txt {margin-left: 9%; }
+.history .inner .top .con .num {position: absolute; top:40%; left:4%; font-size: 250px; color: #FEBA65;  font-family: 'Ivy Mode', sans-serif; z-index: -1; font-weight: 800;}
+
+.history .inner .bottom { width: 54%; float: right;}
+.history .inner .bottom .con {position: relative; z-index: 1;}
+.history .inner .bottom .con .txt {width: 53%; margin-left: 35%;}
+.history .inner .bottom .con .num {position: absolute; top: 43%; left: 4%; font-size: 250px; color: #FEBA65;  font-family: 'Ivy Mode', sans-serif;z-index: -1; font-weight: 800;}
+
+.history .inner .line4 {width: 377px; height: 1px; background: #fff; transform: rotate(90deg); display: inline-block; position: absolute; top: 44%; left: 38%; } 
+
+
+
+/* animation */
+.history .inner .titBox .tit.motion .char {
+    animation:textAni .6s both;
+    animation-delay:  calc(0.08s * var(--char-index));
+}
+@keyframes textAni {
+    0% {opacity: 0;}
+    30% {opacity: 0;}
+}
+
+.con .title.motion span {transform: translate3d(0,0,0) skewy(0deg); overflow: hidden;}
+.con .title.motion span b {display: block; animation-name: textAni1; animation-duration: 1s;}
+
+
+
+
+
+
+/* history02 */
+.history02 {width: 100%; height: 870px; background: #fff; }
+.history02 .inner {width: 90%;  position: relative;   margin: 0 auto; padding-top: 160px; }
+.history02 .inner .con {float: right; width: 47%; z-index: 1; position: relative;}
+.history02 .inner .con .tit {font-size: 85px; color: #272932;  font-family: 'Ivy Mode', sans-serif; font-weight: 700; margin-bottom: 22px;}
+.history02 .inner .con .tit span {display: block;}
+.history02 .inner .con .tit span b {font-weight: 700;}
+
+.history02 .inner .con .txt {font-size: 18px; color: #272932;  font-family: 'Noto Sans KR', sans-serif; font-weight: 400; width: 50%; }
+.history02 .inner .con .num {font-size: 250px; color: #FEBA65;  font-family: 'Ivy Mode', sans-serif; z-index: -1; position: absolute; top: 32%; left: 28%; font-weight: 800;}
+
+.history02 .inner .line5 {width: 377px; height: 1px; background: #F3931B; transform: rotate(90deg); display: inline-block; position: absolute; left: -10%; top: -46%;}
+
+.history02 .inner .name {font-size: 230px; color: #272932;  font-family: 'Ivy Mode', sans-serif; transform: rotate(-90deg); position: absolute; left: 7%; top: -106%; font-weight: 600;}
+.history02 .inner .name span {color: #fff;}
+
+
+.history02 .inner .con .tit.motion span {transform: translate3d(0,0,0) skewy(0deg); overflow: hidden;}
+.history02 .inner .con .tit.motion span b {display: block; animation-name: textAni1; animation-duration: 1s;}
+
+
+
+
+
+/* history03 */
+.history03 {width: 100%; height: 1400px; position: relative;}
+.history03 .inner {width: 80%; margin: 0 auto; padding-top: 50px;}
+.history03 .inner .top {margin-bottom: 350px; position: relative;}
+.history03 .inner .top .con {margin-left:50%; z-index: 1; position: relative;}
+.history03 .inner .top .con .tit {font-size: 85px; color: #F3931B;  font-family: 'Ivy Mode', sans-serif; font-weight: 700; padding: 0 0 22px 90px;}
+.history03 .inner .top .con .tit span {display: block;}
+.history03 .inner .top .con .tit span b {font-weight: 700;}
+
+.history03 .inner .con .txt {width: 50%; font-size: 19px; color: #fff; font-family: 'Noto Sans KR', sans-serif; font-weight: 200; line-height: 1.7; }
+.history03 .inner .top .con .num {font-size: 250px; color: #FEBA65;  font-family: 'Ivy Mode', sans-serif; z-index: -1; position: absolute; top: 20%; left: 43%; font-weight: 800;}
+
+.history03 .inner .top .line6 {width: 410px; height: 1px; background: #FDC682; display: inline-block; transform: rotate(90deg); position: absolute; top: -40%; right: 0; }
+.history03 .inner .top .line7 {width: 411px; height: 1px; background: #fff; display: inline-block; transform: rotate(90deg); position: absolute; bottom: -23%; right: 0; }
+
+.history03 .inner .bottom {margin-left: 10%;}
+.history03 .inner .bottom .con {position: relative; z-index: 1;}
+.history03 .inner .bottom .con .line8 {width: 1250px; height: 1px; background: #fff; display: inline-block; position: absolute; left: -25%;}
+.history03 .inner .bottom .con .num {font-size: 250px; color: #FEBA65;  font-family: 'Ivy Mode', sans-serif; z-index: -1; position: absolute; top: 62%; left: 50%; font-weight: 800;}
+.history03 .inner .bottom .con .tit {font-size: 130px; color: #F3931B;  font-family: 'Ivy Mode', sans-serif; font-weight: 700; margin-bottom: 2%;}
+.history03 .inner .bottom .con .txt {width: 41%; padding: 2% 0 0 25%; line-height: 1.7;}
+
+/* animation */
+.history03 .inner .top .con .tit.motion span {transform: translate3d(0,0,0) skewy(0deg); overflow: hidden;}
+.history03 .inner .top .con .tit.motion span b {display: block; animation-name: textAni1; animation-duration: 1s;}
+
+.history03 .inner .bottom .con .tit.motion span {transform: translate3d(0,0,0) skewy(0deg); overflow: hidden;}
+.history03 .inner .bottom .con .tit.motion span b {display: block; animation-name: textAni1; animation-duration: 1s;}
+
+
+
+
+/* slogan */
+.slogan {width: 100%; height: 100vh;}
+.slogan .inner {width: 90%; margin: 0 auto;  padding-top: 10%;  text-align: center;}
+.slogan .sloganTxt {font-size: 8vw; color: #F3931B; font-family: 'Ivy Mode', sans-serif; font-weight: 700; line-height: 1.2; margin-bottom: 6%;}
+.slogan .sub {font-size: 20px; color: #fff;}
+
+.slogan .sloganTxt.motion .char {
+    animation:textAni .2s both;
+    animation-delay:  calc(0.08s * var(--char-index));
+}
+
+
+
+
+
+
+/* strength */
+.strength {width: 100%; height:1500px;}
+.strength .inner {width: 80%;  height: 100vh; margin: 0 auto; padding-top: 50px; position: relative;}
+.strength .inner .titBox {text-align: right;}
+.strength .inner .titBox .tit {font-size: 60px; color: #F3931B; font-family: 'Ivy Mode', sans-serif; font-weight: 600; }
+.strength .inner .titBox .sub {font-size: 28px; color: #D76E0D; font-family: 'Noto Sans KR', sans-serif;}
+
+.strength .inner .card {display: flex; justify-content: space-between;  margin: 8% 0; z-index: 1; position: absolute; top: 6%; right: 50%; transform: translateX(50%);  width: 95%; } 
+.strength .inner .card li .img img {border-radius: 30px;}
+.strength .inner .card li .title {font-size: 43px; color: #000; font-family: 'Ivy Mode', sans-serif;  font-weight: 600;}
+.strength .inner .card li .text {font-size: 27px; color: #fff; font-family: 'Noto Sans KR', sans-serif; }
+.strength .inner .card li:nth-child(1) {position: relative;}
+.strength .inner .card li:nth-child(1) .title {position: absolute; top: 2%; right: 8%; }
+.strength .inner .card li:nth-child(1) .text {position: absolute; top: 40%; left: 8%; }
+
+.strength .inner .card li:nth-child(2) {margin-top: 15%; position: relative;}
+.strength .inner .card li:nth-child(2) .title {text-align: right; position: absolute; top: 5%; right: 8%; line-height: 1.3;}
+.strength .inner .card li:nth-child(2) .text { position: absolute; top: 53%; left: 8%; color: #2E2E2E;}
+
+.strength .inner .card li:nth-child(3) {margin-top: 30%; position: relative;}
+.strength .inner .card li:nth-child(3) .title {position: absolute; top: 5%; right: 8%; color: #fff;}
+.strength .inner .card li:nth-child(3) .text {position: absolute; bottom: 10%; left: 8%;}
+
+.strength .inner .backTxt {font-size: 20vw; font-weight: 900; font-family: 'Ivy Mode', sans-serif;  -webkit-text-stroke: 1px #e9be8881;  color: #272932; position: absolute; top: 0; left: -10%;}
+
+
+
+
+/* thank */
+.thank {width: 100%; height: 1181px; position: relative;}
+.thank .inner {width: 85%; margin: 0 auto; padding-top: 100px;}
+.thank .inner .tit {font-size: 6vw; color: #fff; font-family: 'Ivy Mode', sans-serif; font-weight: 700; text-align: center; }
+.thank .inner .tit span {display: block;}
+.thank .inner .tit span b {font-weight: 700;}
+.thank .inner .text {font-size: 27px; color: #F3931B; font-family: 'Noto Sans KR', sans-serif; padding-top: 20%; text-align: center;}
+.thank .inner .line9 {width: 312px; height: 1px; background: #fff; position: absolute; bottom: 0%; left: 42%; display: inline-block; transform: rotate(90deg);}
+
+/* animation */
+.thank .inner .tit.motion span {transform: translate3d(0,0,0) skewy(0deg); overflow: hidden;}
+.thank .inner .tit.motion span b {display: block; animation-name: textAni1; animation-duration: 1s;}
+
+.thank .inner .text.motion .char {
+    animation:textAni .6s both;
+    animation-delay:  calc(0.08s * var(--char-index));
+}
+
+
+
+
+/* footer */
+.footer {width: 100%; background: #272932;}
+.footer .inner {width: 95%; margin: 0 auto; padding: 169px 0 120px; }
+.footer .inner .topBox {margin-bottom: 93px;}
+.footer .inner .topBox .img {margin-bottom: 38px; }
+.footer .inner .topBox .img img {animation: rotateAni 10s linear infinite;}
+.footer .inner .contactBox {background: #F3931B; width:100%; border-radius: 20px; height:370px;}
+.footer .inner .contactBox .tit {color: #272932; font-size:210px; font-family: 'Ivy Mode', sans-serif;  font-weight: 400;  padding-left: 5%;}
+
+.footer .inner .bottomBox .info {display: flex; justify-content: flex-end; font-size:54px; color: #F3931B; font-family: 'ivy mode', serif;}
+.footer .inner .info li:nth-child(1) {padding-right: 230px;}
+.footer .inner .bottomBox .info li { width: 20%; line-height: 1.4;}
+
+@keyframes rotateAni {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+   }
+
+
+
+/* 반응형웹제작 */
+/* 1720~1300px */
+@media screen and (max-width:1720px){
+    .inner {width: 90%;}
+    .visual .inner .tit {font-size: 125px; right: 10%; bottom: 13%;}
+    .visual .inner .boxImg img {width: 350px;}
+    .visual .inner .boxImg .text {font-size: 75px;}
+    .visual .inner .lineImg img {width: 97px; }
+    .visual .inner .line1 {width: 1100px;}
+    .visual .inner .line2 {bottom: 15%; left: -22%;}
+
+    .Aboutme .inner {width: 90%;}
+
+    .Aboutme .inner .About .img img {width: 520px;}
+    .profile .inner {width: 90%;}
+    .profile .inner .rightBox {padding-left: 0;}
+    .profile .inner .rightBox img {width: 300px;}
+
+    .history {height: 1500px;}
+    .history .inner {width: 90%;}
+    .history .inner .titBox .tit {font-size: 120px;}
+    .con .title {font-size: 72px;}
+    .con .txt {font-size: 16px;}
+    .history .inner .top .con .num {font-size: 220px;}
+    .history .inner .bottom .con .num {font-size: 220px; }
+
+    .history02 {height: 760px;}
+    .history02 .inner .con .tit {font-size: 72px;}
+    .history02 .inner .con .txt {font-size: 16px;}
+    .history02 .inner .con .num {font-size: 220px; top: 37%;}
+    .history02 .inner .name {font-size: 175px; left: 4%; top: -85%;}
+
+
+    .history03 .inner {width: 90%;}
+    .history03 .inner .top .con .tit {font-size: 72px;}
+    .history03 .inner .con .txt {font-size: 16px; }
+    .history03 .inner .top .con {margin-left: 54%;}
+    .history03 .inner .top .con .num {font-size: 220px; top: 39%;}
+    .history03 .inner .top .line6 {width: 300px; right: 0%;}
+    .history03 .inner .top .line7 {right: -9.5%; bottom: -10%;}
+
+    .history03 .inner .bottom .con .line8 {width: 1000px;}
+    .history03 .inner .bottom .con .tit {font-size: 100px;}
+    .history03 .inner .bottom .con .num {top: 50%;}
+
+    .strength {height: 1200px;}
+    .strength .inner {width: 90%;}
+    .strength .inner .titBox .tit {font-size: 50px;}
+    .strength .inner .titBox .sub {font-size: 24px;}
+    .strength .inner .card li .img img {width: 330px;}
+    .strength .inner .card li .title {font-size: 32px;}
+    .strength .inner .card li .text {font-size: 24px;}
+
+    .thank {height: 1000px;}
+    .thank .inner .line9 {left: 40%;}
+
+    .footer .inner {width: 90%;}
+    .footer .inner .contactBox {height: 260px;}
+    .footer .inner .contactBox .tit {font-size: 150px;}
+    .footer .inner .bottomBox .info {font-size: 40px;}
+}
+
+
+
+
+/* 1300px~1025px (1100px로 잡음) */
+@media screen and (max-width:1300px) {
+    .visual .inner .tit {font-size:100px;  right: 11%; bottom: 19%;}
+    .visual .inner .boxImg img {width: 280px;}
+    .visual .inner .boxImg .text {font-size: 65px;}
+    .visual .inner .lineImg {bottom: 45%;}
+    .visual .inner .lineImg img {width: 95px; }
+    .visual .inner .line1 {width: 860px;}
+    .visual .inner .line2 {bottom: 21%; width: 800px;}
+
+    .Aboutme .inner .About .img img {width: 360px;}
+    
+    .profile .inner .rightBox img {width: 260px;}
+    .profile .inner .leftBox {width: 53%;}
+    .profile .inner .leftBox .profileBox li .tit {font-size: 25px;}
+    .profile .inner .leftBox .profileBox li .text {font-size: 17px;}
+
+    .history .inner .titBox .tit {font-size: 110px;}
+    .con .title {font-size: 67px;}
+    .con .txt {font-size:14px;}
+    .history .inner .top .con .num {font-size:190px ;}
+    .history .inner .bottom .con .num {font-size: 190px;}
+    .history .inner .line4 {left: 33%;}
+
+    .history02 .inner .con {width: 55%;}
+    .history02 .inner .con .tit {font-size: 67px;}
+    .history02 .inner .con .txt  {font-size: 14px;}
+    .history02 .inner .con .num {font-size: 190px;}
+    .history02 .inner .name {font-size:145px;  left:2%; top:-72%;}
+    .history02 .inner .line5 {left: -18%; top: -59%; }
+
+    .history03 .inner .top .con {margin-left: 40%;}
+    .history03 .inner .top .con .tit {font-size: 67px;}
+    .history03 .inner .top .line7 {right: -9.5%; bottom: -24%;}
+
+    .history03 .inner .top .con .num {font-size: 190px;}
+    .history03 .inner .bottom .con .line8 {width: 950px;}
+    .history03 .inner .bottom .con .tit {font-size: 85px;}
+    .history03 .inner .bottom .con .num {font-size: 200px;}
+
+    .strength {height: 900px;}
+    .strength .inner .titBox .tit {font-size: 45px;}
+    .strength .inner .titBox .sub {font-size: 20px;}
+    .strength .inner .card li .img img {width: 270px;}
+    .strength .inner .card li .title {font-size: 28px;}
+    .strength .inner .card li .text {font-size: 20px;}
+    
+    .thank .inner .text {font-size: 24px;}
+    .thank .inner .line9 {left:38%; width: 280px;}
+
+    .footer .inner .contactBox {height: 210px;}
+    .footer .inner .contactBox .tit {font-size: 130px; padding-top: 0;}
+    .footer .inner .bottomBox .info {font-size: 33px;}
+}
+    
+
+
+
+
+/* 1024px~801px (900px로 잡음) */
+@media screen and (max-width: 1024px) {
+    .visual .inner .tit {font-size: 87px; right: 7%;}
+    .visual .inner .boxImg img {width: 250px;}
+    .visual .inner .boxImg .text {font-size: 55px; padding-top: 2%;}
+    .visual .inner .lineImg {bottom: 46%;}
+    .visual .inner .lineImg img {width: 75px; }
+    .visual .inner .line1 {width: 650px;}
+    .visual .inner .line2 {bottom: 37%; width: 800px; left: -39%; }
+
+    .Aboutme .inner .About .img img {width: 300px;}
+    .Aboutme .inner .About .txt1 {font-size: 18px;}
+    .Aboutme .inner .About .txt2 {font-size: 16px;}
+
+    .profile .inner .rightBox img {width: 230px;}
+    .profile .inner .leftBox {width: 53%;}
+    .profile .inner .leftBox .profileBox li .tit {font-size: 20px;}
+    .profile .inner .leftBox .profileBox li .text {font-size: 13px;}
+
+    .history {height:1300px;}
+    .history .inner .titBox .tit {font-size: 80px;}
+    .history .inner .titBox .sub {font-size: 15px;}
+    .con .title {font-size: 60px;}
+    .con .txt {font-size:13px;}
+    .history .inner .top .con .num {font-size:150px ;}
+    .history .inner .bottom .con .num {font-size: 150px;}
+    .history .inner .line4 {width: 270px; left: 28%; top:34%;}
+    
+    .history02 {height:660px ;}
+    .history02 .inner .con {width: 59%;}
+    .history02 .inner .con .tit {font-size: 60px;}
+    .history02 .inner .con .txt  {font-size: 13px;}
+    .history02 .inner .name {font-size:130px; left: 0; top: -65%;}
+    .history02 .inner .line5 {left: -18%; top: -66%; }
+
+    .history03 .inner .top .con .tit {font-size: 60px;}
+    .history03 .inner .con .txt {width: 51%; font-size: 13px;}
+    .history03 .inner .top .con .num {font-size: 150px;}
+    .history03 .inner .top .line6 {width: 235px; right: -7%; top: -45%;}
+    .history03 .inner .top .line7 {right: -24.5%; bottom: -41%;}
+
+    .history03 .inner .bottom .con .line8 {width: 700px;}
+    .history03 .inner .bottom .con .tit {font-size: 75px;}
+    .history03 .inner .bottom .con .num {font-size: 180px; top: 43%;}
+
+    .strength .inner .titBox .tit {font-size: 40px;}
+    .strength .inner .titBox .sub {font-size: 19px;}
+    .strength .inner .card li .img img {width: 230px;}
+    .strength .inner .card li .title {font-size: 23px;}
+    .strength .inner .card li .text {font-size: 17px;}
+
+    .thank {height: 600px;}
+    .thank .inner .text {padding-top: 14%; font-size: 20px;}
+    .thank .inner .line9 {left:37%; width: 230px;}
+
+    .footer .inner .contactBox {height: 170px;}
+    .footer .inner .contactBox .tit {font-size: 110px; padding-top: 0;}
+    .footer .inner .bottomBox .info {font-size: 28px;}
+
+
+}
+
+
+
+/*  800px~501px (700)*/
+@media screen and (max-width:800px) {
+    .visual .inner .tit {font-size: 76px;}
+    .visual .inner .line1 {width: 500px;}
+    .visual .inner .line2 {display: none;}
+
+    .profile .inner .rightBox img {width: 200px;}
+    .profile .inner .leftBox {width: 62%;}
+    .profile .inner .leftBox .profileBox li .text {font-size: 12px;}
+
+    .history .inner .titBox .tit {font-size: 72px;}
+    .history .inner .titBox {padding-bottom: 12%;}
+    .history .inner .top {margin-bottom: 140px;}
+    .con .title {font-size: 50px;}
+    .con .txt {font-size: 12px;}
+    .history .inner .top .con .num {font-size: 110px; top: 53%; left: 1%;}
+    .history .inner .bottom .con .txt {width: 62%;}
+    .history .inner .bottom .con .num {font-size: 110px; top: 53%;}
+
+    .history02 {height: 600px;}
+    .history02 .inner .con {width: 67%;}
+    .history02 .inner .con .num {font-size: 110px; top: 63%;}
+    .history02 .inner .name {font-size: 110px; left: -8%; top: -53%;}
+    .history02 .inner .con .tit {font-size: 50px;}
+    .history02 .inner .con .txt {font-style: 12px;}
+
+    .history03 .inner .top {margin-bottom:320px;}
+    .history03 .inner .top .con .tit {font-size: 50px;}
+    .history03 .inner .con .txt {font-size: 12px;}.history03 .inner .top .con .num {font-size: 110px; top: 48%;}
+    .history03 .inner .top .line7 {right: -31.5%;}
+    .history03 .inner .bottom .con .tit {font-size: 60px;}
+    .history03 .inner .bottom .con .line8 {width:600px;}
+    .history03 .inner .bottom .con .txt {padding: 5% 0 0 25%;}
+    .history03 .inner .bottom .con .num {font-size: 170px;}
+
+    .strength .inner .titBox .tit {font-size: 36px;}
+    .strength .inner .titBox .sub {font-size: 16px;}
+    .strength .inner .card li .img img {width: 174px;}
+    .strength .inner .card li .title {font-size: 19px;}
+    .strength .inner .card li .text {font-size: 14px;}
+
+    .thank {height: 540px;}
+    .thank .inner .text {padding-top: 10%; font-size: 19px;}
+    .thank .inner .line9 {left:35%; width: 210px;}
+
+.footer .inner .topBox .img img {width: 28px; margin-bottom: 20px; }
+    .footer .inner .contactBox {height: 150px;}
+    .footer .inner .contactBox .tit {font-size: 90px;}
+    .footer .inner .bottomBox .info {font-size: 21px;}
+}
+
+
+
+
+/*  500px 이하*/
+@media screen and (max-width:500px) {
+    .visual .inner .tit {font-size: 63px; margin-left: 6%;}
+    .visual .inner .line1 {width: 336px;}
+    .visual .inner .boxImg img {width: 225px;}
+
+    .Aboutme .inner {padding: 140px 0;}
+    .Aboutme .inner .About .txt2{font-size: 12px;}
+
+    .profile .inner .rightBox img {display: none;}
+    .profile .inner .leftBox  {width: 100%;}
+
+    .history {height: 1000px;}
+    .history .inner .titBox .tit {font-size: 46px;}
+    .history .inner .titBox .sub {font-size: 13px;}
+    .history .inner .line4 {display: none;}
+    .con .title {font-size: 39px;}
+    .history .inner .top {margin-left: 12%;}
+    .history .inner .top .con .txt {margin-left: 0; width: 42%;}
+    .history .inner .top .con .num {top: 59%; left: 22%;}
+    .history .inner .bottom .con .txt {width: 92%; margin-left: 0;}
+    .history .inner .bottom {float: left; margin-left: 12%;}
+    .history .inner .bottom .con .num {top: 62%; left: 38%;}
+
+    .history02 {height: 520px;}
+    .history02 .inner {padding-top: 90px;}
+    .history02 .inner .name {display: none;}
+    .history02 .inner .con .tit {font-size: 39px;}
+    .history02 .inner .con {width: 90%;}
+    .history02 .inner .line5 {left: -4%;}
+
+    .history03 {height: 1100px;}
+    .history03 .inner .top .con .num {left: 36%;}
+    .history03 .inner .top .con {margin-left: 12%;}
+    .history03 .inner .top .con .tit {font-size: 39px; padding: 0;}
+    .history03 .inner .top .line6 {width: 190px; right: 21%;}
+    .history03 .inner .top .line7 {width: 330px; right: 2.5%;}
+
+    .history03 .inner .bottom .con .tit {font-size: 49px;}
+    .history03 .inner .bottom .con .line8 {width: 456px;}
+    .history03 .inner .bottom .con .txt {padding: 5% 0 0 12%; width: 66%;}
+    .history03 .inner .bottom .con .num {font-size: 150px;}
+
+    .slogan .sub {font-size: 17px;}
+
+    .strength .inner .card li .img img {width: 130px; border-radius: 16px;}
+    .strength .inner .card li .title {font-size: 17px;}
+    .strength .inner .card li .text {font-size: 13px;}
+
+    .strength .inner .titBox .tit {font-size: 24px;}
+    .strength .inner .titBox .sub {font-size: 12px;}
+
+    .footer .inner .contactBox {height: 100px;}
+    .footer .inner .contactBox .tit {font-size: 60px;}
+    .footer .inner .bottomBox .info {font-size: 17px;}
+}
+
+
